@@ -75,7 +75,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
           {/* Footer */}
           <div className="pt-6 border-t border-primary/20">
             <p className="text-xs text-muted-foreground text-center">
-              © 2024 DataGuard
+              © 2025 DataGuard
               <br />
               Secure. Smart. Reliable.
             </p>
