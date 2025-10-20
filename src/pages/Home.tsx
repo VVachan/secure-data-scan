@@ -30,7 +30,21 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.1),transparent_50%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950/40 to-red-900/30" />
+        
+        {/* Floating Lock Icons */}
+        <div className="absolute inset-0 overflow-hidden">
+          <Lock className="absolute top-[10%] left-[15%] w-16 h-16 text-primary/20 animate-pulse" style={{ animationDelay: '0s', animationDuration: '3s' }} />
+          <Lock className="absolute top-[25%] right-[20%] w-24 h-24 text-primary/15 animate-pulse" style={{ animationDelay: '1s', animationDuration: '4s' }} />
+          <Lock className="absolute top-[45%] left-[8%] w-12 h-12 text-primary/25 animate-pulse" style={{ animationDelay: '2s', animationDuration: '3.5s' }} />
+          <Lock className="absolute top-[60%] right-[12%] w-20 h-20 text-primary/20 animate-pulse" style={{ animationDelay: '0.5s', animationDuration: '4.5s' }} />
+          <Lock className="absolute top-[75%] left-[25%] w-14 h-14 text-primary/15 animate-pulse" style={{ animationDelay: '1.5s', animationDuration: '3s' }} />
+          <Lock className="absolute top-[20%] right-[45%] w-10 h-10 text-primary/30 animate-pulse" style={{ animationDelay: '2.5s', animationDuration: '4s' }} />
+          <Lock className="absolute top-[85%] right-[35%] w-16 h-16 text-primary/20 animate-pulse" style={{ animationDelay: '0.8s', animationDuration: '3.5s' }} />
+          <Lock className="absolute top-[35%] left-[40%] w-12 h-12 text-primary/25 animate-pulse" style={{ animationDelay: '1.8s', animationDuration: '4.2s' }} />
+          <Lock className="absolute top-[55%] right-[60%] w-18 h-18 text-primary/15 animate-pulse" style={{ animationDelay: '2.2s', animationDuration: '3.8s' }} />
+          <Lock className="absolute top-[15%] left-[70%] w-14 h-14 text-primary/20 animate-pulse" style={{ animationDelay: '1.2s', animationDuration: '4.5s' }} />
+        </div>
         
         <div className="container mx-auto max-w-6xl relative z-10">
           <div className="text-center space-y-8 animate-fade-in">
