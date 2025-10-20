@@ -30,7 +30,7 @@ const Home = () => {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <section className="relative overflow-hidden py-20 px-4">
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950/40 to-red-900/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.1),transparent_50%)]" />
         
         {/* Floating Lock Icons */}
         <div className="absolute inset-0 overflow-hidden">
