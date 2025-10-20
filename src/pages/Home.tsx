@@ -98,9 +98,66 @@ const Home = () => {
       </section>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t border-primary/20">
-        <div className="container mx-auto text-center text-muted-foreground">
-          <p>© 2024 DataGuard | Secure. Smart. Reliable.</p>
+      <footer className="py-12 px-4 border-t border-primary/20">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid md:grid-cols-3 gap-8 mb-8">
+            {/* About Section */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Shield className="w-6 h-6 text-primary" />
+                <h3 className="text-xl font-bold text-primary">DataGuard</h3>
+              </div>
+              <p className="text-muted-foreground text-sm">
+                Your trusted partner for secure dataset analysis and threat detection.
+              </p>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link to="/" className="hover:text-primary transition-colors">
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/upload" className="hover:text-primary transition-colors">
+                    Upload Dataset
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/privacy" className="hover:text-primary transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Section */}
+            <div>
+              <h4 className="text-lg font-semibold mb-4">Contact Support</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li className="flex items-center gap-2">
+                  <span className="text-primary">📧</span>
+                  <a 
+                    href="mailto:datagaurd@gmail.com" 
+                    className="hover:text-primary transition-colors"
+                  >
+                    datagaurd@gmail.com
+                  </a>
+                </li>
+                <li className="text-xs mt-4">
+                  Need help? Contact our support team for assistance with your datasets.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Bar */}
+          <div className="pt-8 border-t border-primary/20 text-center text-sm text-muted-foreground">
+            <p>© 2025 DataGuard. All rights reserved. | Secure. Smart. Reliable.</p>
+          </div>
         </div>
       </footer>
     </div>
