@@ -1,0 +1,110 @@
+import { Link } from "react-router-dom";
+import { Shield, Upload, Zap, Lock, Target } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
+const Home = () => {
+  const features = [
+    {
+      icon: Upload,
+      title: "Easy Upload",
+      description: "Drag and drop your CSV files with support up to 300MB",
+    },
+    {
+      icon: Zap,
+      title: "Quick Analysis",
+      description: "Get instant insights powered by advanced algorithms",
+    },
+    {
+      icon: Lock,
+      title: "Secure & Reliable",
+      description: "Your data is processed securely with enterprise-grade protection",
+    },
+    {
+      icon: Shield,
+      title: "Privacy First",
+      description: "We respect your privacy. Files are analyzed and never stored",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-background">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden py-20 px-4">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,136,0.1),transparent_50%)]" />
+        
+        <div className="container mx-auto max-w-6xl relative z-10">
+          <div className="text-center space-y-8 animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card glow-border">
+              <Shield className="w-5 h-5 text-primary" />
+              <span className="text-sm font-medium">Secure Dataset Analysis</span>
+            </div>
+            
+            <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+              Welcome to{" "}
+              <span className="text-primary glow-text">DataGuard</span>
+            </h1>
+            
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+              Upload your CSV files easily and get quick insights from your data!
+            </p>
+            
+            <Link to="/upload">
+              <Button size="lg" className="btn-glow text-lg px-8 py-6 rounded-full">
+                Get Started
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold">About DataGuard</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              DataGuard is a powerful dataset upload and analysis portal designed to make data insights accessible to everyone.
+            </p>
+          </div>
+
+          {/* Feature Cards */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 hover:glow-border transition-all duration-300 animate-fade-in"
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                <feature.icon className="w-12 h-12 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
+                <p className="text-muted-foreground">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Mission Section */}
+      <section className="py-20 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <div className="glass-card p-8 md:p-12 text-center space-y-6 glow-border">
+            <Target className="w-16 h-16 text-primary mx-auto" />
+            <h2 className="text-3xl md:text-4xl font-bold">Our Mission</h2>
+            <p className="text-lg text-muted-foreground">
+              To empower organizations and individuals with cutting-edge data analysis tools that detect threats and provide actionable insights. We believe in making cybersecurity accessible, transparent, and effective for everyone.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 border-t border-primary/20">
+        <div className="container mx-auto text-center text-muted-foreground">
+          <p>© 2024 DataGuard | Secure. Smart. Reliable.</p>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default Home;
